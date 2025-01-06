@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "start:dev": "nodemon ./dist/server.js",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
     "format": "prettier . --write",
@@ -18,11 +19,13 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "mongoose": "^8.9.3"
+    "mongoose": "^8.9.3",
+    "ts-node-dev": "^2.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "@types/cors": "^2.8.17",
+    "@types/eslint__js": "^8.42.3",
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.5",
     "@typescript-eslint/eslint-plugin": "^8.19.0",
@@ -30,6 +33,7 @@
     "eslint": "^9.14.0",
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.14.0",
+    "nodemon": "^3.1.9",
     "prettier": "^3.4.2",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.19.0"
