@@ -1,4 +1,3 @@
-import { Student } from './student.interface';
 import { Request, Response } from 'express';
 import { StudentServices } from './stydent.service';
 

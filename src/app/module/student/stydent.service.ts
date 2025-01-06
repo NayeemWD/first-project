@@ -11,7 +11,7 @@ const getAllStudentsFromBD = async () => {
   return result;
 };
 
-const getSingleStudentFromBD = async (id: String) => {
+const getSingleStudentFromBD = async (id: string) => {
   const result = await StudentModel.findOne({ id });
   return result;
 };
