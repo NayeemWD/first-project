@@ -1,19 +1,37 @@
 import { Request, Response } from 'express';
 import { StudentServices } from './stydent.service';
+import studentValidationSchema from './student.validation';
 
 const createStudent = async (req: Request, res: Response) => {
   try {
-    const { student: studentData } = req.body; //will cal service func to send this data
+    const { student: studentData } = req.body;
+
+    // const { value, error } = studentValidationSchema.validate(studentData);
+    const { error } = studentValidationSchema.validate(studentData);
+    // console.log(value, error);
+    // console.log({ value }, { error });
+
     const result = await StudentServices.createStudentIntoDB(studentData);
 
-    // send response
+    if (error) {
+      res.status(500).json({
+        success: false,
+        massage: 'something went wrong',
+        error: error.details,
+      });
+    }
+
     res.status(200).json({
       success: true,
       massage: 'Student is created succesfully',
       data: result,
     });
   } catch (error) {
-    console.log(error);
+    res.status(500).json({
+      success: false,
+      massage: 'something went wrong',
+      err: error,
+    });
   }
 };
 
