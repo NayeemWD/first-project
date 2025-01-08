@@ -48,7 +48,7 @@ const guardianSchema = Joi.object({
 });
 
 const localGuardianSchema = Joi.object({
-  Name: Joi.string().required().messages({
+  name: Joi.string().required().messages({
     'string.empty': 'Local Guardian Name is required',
   }),
   Occupation: Joi.string().required().messages({

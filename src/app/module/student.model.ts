@@ -66,15 +66,15 @@ const guardianSchema = new Schema<Gurdian>({
   },
 });
 const localGuardianSchema = new Schema<LocalGuardian>({
-  Name: {
+  name: {
     type: String,
     required: [true, 'Name is required'],
   },
-  Occupation: {
+  occupation: {
     type: String,
     required: [true, 'Occupation is required'],
   },
-  ContactNo: {
+  contactNo: {
     type: String,
     required: [true, 'Contact number is required'],
   },
@@ -83,6 +83,7 @@ const localGuardianSchema = new Schema<LocalGuardian>({
     required: [true, 'Address is required'],
   },
 });
+
 const studentSchema = new Schema<Student>({
   id: {
     type: String,

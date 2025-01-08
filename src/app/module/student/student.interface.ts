@@ -17,15 +17,15 @@ export type Gurdian = {
   motherContactNo: string;
 };
 export type LocalGuardian = {
-  Name: string;
-  Occupation: string;
-  ContactNo: string;
+  name: string;
+  occupation: string;
+  contactNo: string;
   address: string;
 };
 export type Student = {
   id: string;
   name: UserName;
-  gender: 'male' | 'femail' | 'other';
+  gender: 'male' | 'female' | 'other';
   dateOfBirth: string;
   email: string;
   contactNo: string;
