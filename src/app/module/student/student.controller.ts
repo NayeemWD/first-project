@@ -35,10 +35,10 @@ const createStudent = async (req: Request, res: Response) => {
       massage: 'Student is created succesfully',
       data: result,
     });
-  } catch (error) {
+  } catch (error: any) {
     res.status(500).json({
       success: false,
-      massage: 'something went wrong',
+      massage: error.message || 'something went wrong',
       err: error,
     });
   }
